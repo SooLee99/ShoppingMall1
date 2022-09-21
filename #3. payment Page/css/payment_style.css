@@ -1,0 +1,139 @@
+/* section style css (2022-08-30 이수) */
+.orderform {
+    width: 80%; 
+    height: auto;
+    margin-left:10%;
+    margin-right: 10%;
+    display: inline-block;                      /* Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 된다. (2022-08-30 이수) */
+    /*justify-content: space-between;     /* 아이템들의 “사이(between)”에 균일한 간격을 만들어준다. (2022-08-30 이수) */
+}   
+
+/* 상단 콘텐츠 텍스트 (2022-08-31 이수) */
+.page-maincontent h1{
+    font-size: 28px;
+    text-align: left;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+/* 구매목록 테이블 (2022-09-02 이수)*/
+table {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-collapse: 1px solid black;
+    margin-bottom: 50px;
+}
+th, td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+table input {
+    width: 100%;
+    float: inline-start;
+}
+/* 하단 버튼 (2022-09-01 이수) */
+.abutton, .abutton:link, .abutton:visited, .abutton:active, input[type=button] {
+    background-color: #383838;
+    border: 1px solid #888888;
+    color: #ffffff;
+    cursor: pointer;
+    letter-spacing: -1px;
+    padding: 3px 5px;
+    margin: 2px 3px;
+    width: auto;
+    word-break: keep-all;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9375em;
+}
+
+.abutton-alt {
+    background-color: #d3e2c6;
+}
+.blue {
+  color: #0075ff;
+}
+.basketrowcmd, .sumcount, .summoney{
+  text-align: right;
+  margin-bottom: 10px;
+}
+.sumcount, .summoney{
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.buttongroup{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.buttongroup a{
+  text-decoration: none;
+}
+.payment, .cmd a, .cmd span {
+    padding: 12px 30px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    color: #000;
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+.payment, .cmd.small a, .cmd.small span {
+    padding: 6px 20px;
+    font-size: 0.8125em;
+}
+
+.orderform .p_num {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 0;
+}
+
+.bottombar {
+	float: right;
+    width: 100%;
+    display: block;
+    flex-direction: column; 
+    flex-wrap: wrap; 
+
+}
+input {
+    font-size: 15px;
+    border: 0;
+    outline: none;
+    background-color: whitesmoke;
+}
+@media screen and (max-width: 820px) {
+    .page-maincontent h1{
+        font-size: 20px;
+        text-align: left;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    table {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .abutton, .abutton:link, .abutton:visited, .abutton:active, input[type=button] {
+        font-size: 10px;
+    }
+
+    .sumcount, .summoney{
+        font-size: 1em;
+    }
+
+    .payment, .cmd a, .cmd span {
+        padding: 5px 12px;
+        font-size: 0.8em;
+    }
+    .orderform .p_num {
+        text-align: center;
+        font-size: 10px;
+        padding-top: 0;
+    }
+}

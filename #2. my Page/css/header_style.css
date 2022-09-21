@@ -1,0 +1,156 @@
+/* header style css (2022-08-29 이수) */
+
+/* 색상 수정 변수 (2022-08-29 이수) */
+:root {
+--text-color: black;
+--background-color: white;
+--accent-color: black;
+--hover-color: #FFE699;
+--hover-textcolor: black;
+}
+
+.navbar {
+    display: flex;                      /* Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 된다. (2022-08-30 이수) */
+    justify-content: space-between;     /* 아이템들의 “사이(between)”에 균일한 간격을 만들어준다. (2022-08-30 이수) */
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.navbar_logo {
+    font-size: 24px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+header a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+div.menu_box {  
+    width: 660px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+.menu_box a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar_mainmenu {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    list-style: none;                   /* 항목 모양을 한꺼번에 지정할 수 있다. (2022-08-30 이수) */ /* none : 기본 값 (2022-08-30 이수) */
+    float: right;
+    margin-bottom: 20px;
+}
+
+.navbar_mainmenu li{
+    display: inline-block;
+    justify-content: space-between;
+    text-align: center;
+    margin:  15px 0 0 50px;
+    padding: 8px 12px;
+    font-family: "맑은고딕";
+    font-weight: bold;
+    font-size: 17px;
+}
+.navbar_mainmenu :hover {
+    color:  var(--hover-textcolor);
+    background-color: var( --hover-color);
+    border-radius: 8px;
+}
+
+.navbar_topmenu {
+    display: flex;
+    color: var(--text-color);
+    list-style: none;
+    float: right;
+    text-align: right;
+}
+
+.navbar_topmenu li{
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: "맑은고딕";
+}
+
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 940px) {
+    .navbar {
+        /* flex-direction : CSS 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정 (2022-08-30 이수) */
+        flex-direction: column;         /* column : 글 여러 줄이 쌓이는 방향대로 (2022-08-30 이수) */
+        /*align-items: flex-start;*/
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    div.menu_box {  
+        margin: 0 auto;  
+        /* justify-content : 메인축 방향으로 아이템을들 정렬하는 속성 (2022-08-30 이수) */
+        /*justify-content: center;*/
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar_logo {
+        font-size: 15px;
+        /*flex-direction: column;*/
+        align-items: center;
+        float: center;
+        text-align: center;
+        margin: 15px 0px 0px 0px;
+
+    }
+
+    .navbar_topmenu {
+        display: none;
+        /*flex-direction: row;*/
+        justify-content: center;
+        width:100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar_topmenu li {
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .navbar_mainmenu {
+        display: none;
+        width:100%;
+        /*float: center;*/
+        flex-direction: column;
+        /*align-items: center;*/
+        max-width: 100%;
+    }
+
+    .navbar_mainmenu li {
+        text-align: center;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .navbar_toggleBtn {
+        display: block;
+        font-size: 25px;
+        margin-top: 12px;
+    }
+
+    .navbar_mainmenu.active,
+    .navbar_topmenu.active {
+        display: flex;
+    }
+}

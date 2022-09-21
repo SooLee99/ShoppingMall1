@@ -1,0 +1,94 @@
+/* section style css (2022-08-30 이수) */
+.mypageform {
+    background-color: white;
+    width: 80%; 
+    height: auto;
+    margin-left:10%;
+    margin-right: 10%;
+    display: inline-block;                      /* Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 된다. (2022-08-30 이수) */
+    justify-content: space-between;     /* 아이템들의 “사이(between)”에 균일한 간격을 만들어준다. (2022-08-30 이수) */
+}   
+
+/* 상단 콘텐츠 텍스트 (2022-08-31 이수) */
+.page-maincontent{
+    margin-top: 20px;
+   /* background-color: skyblue; */
+    height: auto;
+    padding-bottom: 30px;
+}
+.page-maincontent h1{
+    font-size: 40px;
+    text-align: left;
+    color: black;
+}
+/* 프로필 (2022-09-02 이수) */
+.page-profile {
+    margin-top: 10px;
+}
+.page-profile h1{
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* 주문정보 (2022-09-02 이수) */
+.page-order {
+    margin-top: 10px;
+}
+.page-order h1{
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* 중단 장바구니 테이블 (2022-08-31 이수) */
+/* 상단 테이블 목록 (2022-08-31 이수) */
+table {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-collapse: 1px solid black;
+    margin-bottom: 50px;
+}
+th, td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+@media screen and (max-width: 820px) {
+    section{
+        padding-top: 10px;
+    }
+
+    /* 상단 콘텐츠 텍스트 (2022-08-31 이수) */
+    .page-maincontent{
+        margin-top: 0px;
+        height: auto;
+        padding-bottom: 18px;
+    }
+    .page-maincontent h1{
+        font-size: 30px;
+    }
+    /* 프로필 (2022-09-02 이수) */
+    .page-profile {
+        margin-top: 0px;
+    }
+    .page-profile h1{
+        font-size: 18px;
+    }
+    /* 주문정보 (2022-09-02 이수) */
+    .page-order {
+        margin-top: 10px;
+    }
+    .page-order h1{
+        font-size: 18px;
+        text-align: left;
+    }
+    /* 중단 장바구니 테이블 (2022-08-31 이수) */
+    /* 상단 테이블 목록 (2022-08-31 이수) */
+    table {
+        font-size: 12px;
+    }
+}

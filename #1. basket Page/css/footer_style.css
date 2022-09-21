@@ -1,0 +1,81 @@
+ /* footer style css (2022-08-29 이수) */
+footer .box {  
+	margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: stretch;
+    float: top;
+/*	border: solid 1px red;  */
+
+}
+footer {
+    height: 230px auto;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    position : relative;
+    bottom : 0;
+}
+#bottom_menu ul {
+    padding: 20px 0 0 100px;
+    font-weight: bold;
+}
+#bottom_menu li {
+    display: inline;
+    margin-right: 30px;
+}
+footer .items {
+    text-align: center;
+    float: center;
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+footer h3 {  
+    color:#FFE699; 
+}
+footer .items ul {  
+    margin-top: 15px; 
+}
+footer .items li {
+    margin-top: 5px; 
+}
+footer .phone {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    footer .box {  
+        display: block;
+        justify-content: center; 
+    }
+    footer {
+        height: auto;
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        position : relatives;
+        bottom : 0;
+    }
+    footer .items {
+        text-align: center;
+        float: center;
+        width: auto;
+        padding: 10px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+    footer h3 {  
+        font-size: 20px;
+    }
+    footer .items ul {  
+        font-size: 15px;
+        margin-top: 8px; 
+    }
+    footer .phone {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
